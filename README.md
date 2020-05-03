@@ -6,7 +6,8 @@ Prerequisities:
   Python libraries - sklearn, pandas, numpy, matplotlib
   
 Method:
-  TfisVectorizer is used for feature extraction.
+
+  TfidVectorizer is used for feature extraction.
   Multinomial Naive Bayes model is used for training the dataset.
 
 Input:
