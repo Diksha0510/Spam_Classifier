@@ -91,11 +91,10 @@ m_confusion_test = metrics.confusion_matrix(y_test, bayes.predict(X_test))
 print(pd.DataFrame(data = m_confusion_test, columns = ['Predicted 0', 'Predicted 1'],
             index = ['Actual 0', 'Actual 1']))
 
-#now we can use our own sample dataset and rum on our trained model to check for the output
+#now we can use our own sample dataset and run on our trained model to check for the output
 str=input("Enter your mail to check whether it is spam or not")
-data={1:{'Spam':str}}
-column=('Spam')
-df=pd.DataFrame(data=data, index=column)
+data={'Spam':str}
+df=pd.DataFrame([data], index=['v1']).T
 df.to_csv('sample_input.csv')
 data1 = pd.read_csv('sample_input.csv', encoding='latin-1')
 X = f.transform(data1["v1"])
